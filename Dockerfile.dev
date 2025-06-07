@@ -1,4 +1,9 @@
 FROM python:slim
 RUN apt-get update && \
+    apt-get upgrade -y && \
     apt-get clean && \
+    apt-get install -y python3-gpiozero && \
     rm -rf /var/lib/apt/lists/*
+ADD src/main.py /
+RUN pip install pysolar gpiozero requests
+CMD ["python", "main.py"]
