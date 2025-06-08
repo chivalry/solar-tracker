@@ -1,0 +1,4 @@
+LATITUDE: float = 33.8042367
+LONGITUDE: float = -116.9791774
+AZIMUTH: int = 180
+ALTITUDE: int = 0
