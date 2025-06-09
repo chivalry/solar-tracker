@@ -1,0 +1,9 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    image: "chivalrysoft/solar-tracker"
+    command: python main.py
+    devices:
+      - /dev/gpiomem:/dev/gpiomem
